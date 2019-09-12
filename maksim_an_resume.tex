@@ -1,0 +1,196 @@
+%-------------------------
+% Resume in Latex
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://www.linkedin.com/in/anmaxvl/}{\Large Maksim An}} & Email : \href{mailto:anmaxvl@gmail.com}{anmaxvl@gmail.com}\\
+  \href{https://www.linkedin.com/in/anmaxvl/}{https://www.linkedin.com/in/anmaxvl/} & Mobile : +1-619-966-7033 \\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Gwangju Institute of Science and Technology}{Gwangju, South Korea}
+      {Master of Science in Computer Science;  GPA: 3.75}{Sep. 2012 -- Aug. 2015}
+    \resumeSubheading
+      {Lomonosov Moscow State University}{Moscow, Russian Federation}
+      {Bachelor of Science in Applied Mathematics and Computer Science, Hons;  GPA: 3.83 (4.79/5)}{Sep. 2006 -- May. 2010}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {University of Chicago}{Chicago, IL}
+      {Software Engineer}{Mar 2018 - Present}
+      \resumeItemListStart
+        \resumeItem{GDC API}
+          {Updated public facing and internal/admin submission APIs to support file versioning, added new APIs, extended GraphQL and Elasticsearch query logic to support visualization of copy number variations (CNVs) and controlled mutations (DAVE CA), validated features and components integration, updated services and deployments}
+        \resumeItem{QC Reports}
+          {QC (Quality Control) Reports is an async system for validating correctness and quality of user submitted data. Designed and implemented backend for QC Reports, which improved the feedback cycle from several weeks to a couple of hours}
+        \resumeItem{ESBuild and GDC Mutation Indexer}
+          {TODO:}
+        \resumeItem{GDC Data}
+          {Improved data submission and release process by designing and implementing several data freeze features}
+        \resumeItem{GPAS}
+          {Assist bioinformatics team in improving pipeline automation system, by enhancing data importing and exporting}
+        \resumeItem{DTT-client}
+          {added support for downloading latest file versions, extended client functionality to support custom user configs, bug fixes/improvements}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Dog and Rooster}{San Diego, CA}
+      {Programming Manager}{Feb 2017 - Feb 2018}
+      \resumeItemListStart
+        \resumeItem{Project management}
+          {Managed a team of 6 developers and 3-5 concurrent projects. Translated clients’ needs into product and successfully launched 3 projects. Clients opt-in to company’s maintenance plan after completion of project}
+        \resumeItem{DevOps}
+          {Managed company’s AWS infrastructure. Lead migration from Godaddy/Bluehost to AWS, reducing company’s hosting costs by more than 50%. Trained and guided other developers in different AWS setups, thus improving their competencies and increasing company’s range of services accordingly}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Kloudless}{Berkeley, CA}
+      {Software Engineer}{May 2017 - Nov 2017}
+      \resumeItemListStart
+        \resumeItem{OAuth Form Prefill}
+          {Introduced OAuth form prefill capability, which improved end-user experience}
+        \resumeItem{Token Exchange}
+          {Introduced token-exchange grant flow to provision Bearer tokens, which improved security by limiting the token permissions to specific apis and services only in comparison to API or Developer keys which have application wide permissions; extended authorization tests to cover Bearer tokens in addition to API and Developer Keys}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Cloudlinux}{Palo Alto, CA}
+      {Python Developer/QA Automation}{May 2016 - Jan 2017}
+      \resumeItemListStart
+        \resumeItem{Kuberdock CI/CD}
+          {Improved CI tests coverage for multiple pipelines: persistent volumes (local storage, CEPH, extended coverage for ZFS, ZFS-on-EBS), network isolation (extended coverage for clusters with multiple nodes, intra-container communication within pods, arbitrary port opening, unauthenticated mail blocking), direct access (complete coverage of ssh/sftp/scp).}
+          {Created new pipelines to cover: pod/node failures, pod migration, pod restart policies, UI tests for pods with public IP addresses, enabling/disabling public ports.}
+          {Automated 80-90% of manual TestRail suites for persistent volumes, network isolation, direct access, pod restart policies/migration, node failures.}
+        \resumeItem{Kuberdock Core}
+          {Various fixes and improvements around Node deployments/helathchecks, Pod creation/deletion, admin and user notifications.}
+      \resumeItemListEnd
+
+    \resumeSubHeading
+      {Future Systems}{Seongnam, South Korea}
+      {Python Developer}{Sep 2015 - Mar 2016}
+      \resumeItemListStart
+        \resumeItem{Appliance Software}
+          {Improved event processing speed by more than 70%, by replacing MySQL with Redis}
+          {Realized ELK stack for log processing as a substitute to the current log processing pipeline}
+      \resumeItemListEnd
+    \resumeSubHeading
+      {Gwangju Institute of Science and Technology}{Gwangju, South Korea}
+      {Associate Researcher}{Mar 2012 - Aug 2015}
+      \resumeItemListStart
+        \resumeItem{Computer Vision}
+          {Combined bag of visual words (SIFT and SVM) with scene modeling to pre-process images from in-vehicle cameras to identify areas of interest to further apply a sliding window operation, which reduced video frame processing time from 2s down to 0.15s}
+        \resumeItem{Neural Networks}
+          {Developed software for memristor based neural network hardware simulation}
+        \resumeItem{Singal Processing}
+          {Created guitar chord recognition software based on Hidden Markov Model (utilized Hidden Markov Model Tool Kit)}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubItem{QuantSoftware Toolkit}
+      {Open source python library for financial data analysis and machine learning for finance.}
+    \resumeSubItem{Github Visualization}
+      {Data Visualization of Git Log data using D3 to analyze project trends over time.}
+    \resumeSubItem{Recommendation System}
+      {Music and Movie recommender systems using collaborative filtering on public datasets.}
+    \resumeSubItem{Mac Setup}
+      {Book that gives step by step instructions on setting up developer environment on Mac OS.}
+  \resumeSubHeadingListEnd
+
+%
+%--------PROGRAMMING SKILLS------------
+%\section{Programming Skills}
+%  \resumeSubHeadingListStart
+%    \item{
+%      \textbf{Languages}{: Python, Javascript, C++, SQL, Java}
+%      \hfill
+%      \textbf{Technologies}{: AWS, GCE, OpenStack, Elasticsearch}
+%    }
+%  \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
